@@ -22,5 +22,3 @@ Setup & Requirements
 ====================
 
 pip install networkx
-TrustVisualizer.py <trusts.csv>
-
