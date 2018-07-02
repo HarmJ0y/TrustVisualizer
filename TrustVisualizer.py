@@ -36,8 +36,8 @@ if __name__ == '__main__':
             # csv format:
             #   SourceName,TargetName,TrustType,TrustAttributes,TrustDirection,WhenCreated,WhenChanged
             ecolor = ''
-            sourceName = row[0].strip()
-            targetName = row[1].strip()
+            sourceName = row[0].upper().strip()
+            targetName = row[1].upper().strip()
             trustType = row[2].strip()
             trustAttributes = row[3].strip()
             trustDirection = row[4].strip()
