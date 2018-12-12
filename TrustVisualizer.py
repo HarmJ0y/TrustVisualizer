@@ -57,7 +57,7 @@ if __name__ == '__main__':
                 elif (trustAttributes == "FOREST_TRANSITIVE"):
                     # blue label for inter-forest trusts
                     ecolor = '#0000CC'
-                elif ((trustAttributes == "") or (trustAttributes == "TREAT_AS_EXTERNAL") or (trustAttributes == "FILTER_SIDS")):
+                elif ((trustAttributes == "") or ("TREAT_AS_EXTERNAL" in trustAttributes) or ("FILTER_SIDS" in trustAttributes) or ("CROSS_ORGANIZATION" in trustAttributes)):
                     # red label for external trusts
                     ecolor = '#FF0000'
                 else:
