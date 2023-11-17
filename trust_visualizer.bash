@@ -1,5 +1,14 @@
 #!/bin/bash
 
+##############################################################################
+# Author: @Sma-Das
+#
+# Description: Simplify usage of Docker to execute this script.
+#           
+#
+# License: BSD 3-clause
+##############################################################################
+
 # Check if the number of arguments is correct
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <file_path>"
