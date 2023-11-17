@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 ##############################################################################
-# Author: @harmj0y | @Sma-Das
+# Author: @harmj0y
 #
 # Based on: https://github.com/sixdub/DomainTrustExplorer by @sixdub
 #
@@ -17,7 +17,7 @@ import sys, csv
 if __name__ == '__main__':
 
     if (len(sys.argv) != 2):
-        print("usage: ./TrustVisualizer.py <trust_file.csv>")
+        print "usage: ./TrustVisualizer.py <trust_file.csv>"
         exit()
 
     graph = nx.DiGraph()
@@ -62,7 +62,7 @@ if __name__ == '__main__':
                     ecolor = '#FF0000'
                 else:
                     # violet label for unknown
-                    print("[-] Unrecognized trust attributes between %s and %s : %s" % (sourceName, targetName, trustAttributes))
+                    print "[-] Unrecognized trust attributes between %s and %s : %s" % (sourceName, targetName, trustAttributes)
                     ecolor = '#EE82EE'
 
             # add the domain nodes to the internal graph
@@ -78,9 +78,9 @@ if __name__ == '__main__':
             elif "Inbound" in trustDirection:
                 graph.add_edge(sourceName, targetName, color=ecolor)
             else:
-                print("[-] Unrecognized relationship direction between %s and %s : %s" % (sourceName, targetName, trustDirection))
+                print "[-] Unrecognized relationship direction between %s and %s : %s" % (sourceName, targetName, trustDirection)
 
         outputFile = intputFile + ".graphml"
         nx.write_graphml(graph, outputFile)
-        print("\n[+] Graphml writte to '%s'" % (outputFile))
-        print("\n[*] Note: green = within forest, red = external, blue = forest to forest, black = MIT, violet = unrecognized\n")
+        print "\n[+] Graphml writte to '%s'" % (outputFile)
+        print "\n[*] Note: green = within forest, red = external, blue = forest to forest, black = MIT, violet = unrecognized\n"
