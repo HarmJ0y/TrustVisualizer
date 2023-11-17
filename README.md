@@ -22,3 +22,8 @@ Setup & Requirements
 ====================
 
 pip install networkx
+
+Docker Usage
+====================
+
+docker run --rm -v <host_file_path.csv:/new_container_path.csv> smadas/py2trust python /TrustVisualizer.py <new_container_path.csv>
